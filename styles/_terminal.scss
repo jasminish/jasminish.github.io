@@ -1,0 +1,77 @@
+// terminal 
+.terminal {
+	position: relative;
+	text-align: left;
+	width: 600px;
+	max-width: 100%;
+	height: 400px;
+	min-height: 50vh;
+	margin: 5px; 
+	
+	.terminal-title-bar {
+		background: #E0E8F0;
+		height: 30px;
+		border-radius: 8px 8px 0 0;
+		padding-left: 10px;
+	}
+	
+	.terminal-btn {
+		width: 12px;
+		height: 12px;
+		margin: 10px 4px 0 0;
+		display: inline-block;
+		border-radius: 8px;
+		
+		&--red { background: #E75448; }
+		&--yellow { background: #E5C30F; }
+		&--green { background: #3BB662; }
+	}
+	
+	.terminal-body {
+		color: white;
+		font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+		font-size: 11pt;
+		background: #30353A;
+		padding: 10px;
+		border-radius: 0 0 8px 8px;
+		position: absolute;
+		width: 100%;
+		top: 30px;
+		bottom: 0;
+		overflow: auto;
+
+		.typed-cursor {
+			opacity: 1;
+			-webkit-animation: blink 0.7s infinite;
+			-moz-animation: blink 0.7s infinite;
+			animation: blink 0.7s infinite;
+		}
+
+		.terminal-output { 
+			color: $accent;
+			padding-left: 20px;
+			line-height: 135%;
+			letter-spacing: 1px;
+		}
+	}
+
+	@keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	@-webkit-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	@-moz-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+}
+
+@media (max-width: $screen-md) {
+	.terminal { display: none; }
+}
