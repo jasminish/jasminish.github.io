@@ -7,49 +7,90 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="assets/me.jpg">
 	<link rel="stylesheet" href="styles/styles.css">
+	<script src="js/tabs.js"></script>
 	<title>Jasmine</title>
 </head>
 
 <body>
-	<div class="about-container">
-		<img class="profile-pic" src="assets/me.jpg" />
-		<div class="about-me">
-			<div class="title">Jasmine 👩🏻‍💻</div>
-			<p>
-				👋🏼 Hello there, I'm Jasmine!<br />
-				I'm a software engineer with a need to tinker away at things and a curiosity for how things work.
-			</p>
-			<div class="about-links">
-				<a class="btn" href="">Resume</a>
-				<a class="btn" href="https://linkedin.com/in/jasmine-ang-318461139">LinkedIn</a>
-				<a class="btn" href="mailto:jasminishh@gmail.com">Email</a>
+	<div class="container">
+		<div class="about-container">
+			<img class="profile-pic" src="assets/me.jpg" />
+			<div class="about-me">
+				<div class="title">Jasmine 👩🏻‍💻</div>
+				<p>
+					👋🏼 Hello there, I'm Jasmine!<br />
+					I'm a software engineer with a need to tinker away at things and a curiosity for how things work.
+				</p>
+				<div class="about-links">
+					<a class="btn" href="">Resume</a>
+					<a class="btn" href="https://linkedin.com/in/jasmine-ang-318461139">LinkedIn</a>
+					<a class="btn" href="mailto:jasminishh@gmail.com">Email</a>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="heading">About Me</div>
-	<div class="container">
+		<div class="heading">About Me</div>
 		<p>
-			I am currently a software engineering consultant at <a href="">ThoughtWorks</a>, where I help clients develop
-			systems at scale. While I am a proficient full-stack developer, my interest lies in building, and learning more
-			about, backend services.
+			I am currently a software engineering consultant at <a href="https://www.thoughtworks.com/">ThoughtWorks</a>,
+			where I help clients develop systems at scale. While I am a proficient full-stack developer, my interest lies in
+			building, and learning more about, backend services.
 		</p>
-		<p>
-			My past experiences include work at startups such as <a href="https://sleek.sg/">Sleek</a>, a startup based in
-			Singapore that helps other companies start up, and <a href="https://www.fellowai.com/">Fellow Inc.</a>, a robotics
-			startup in the SF Bay Area. Some cool things I've done:
-			<ul>
-				<li>Authored scripts for automated data extraction, processing, and migration</li>
-				<li>Built web-based tools eg. dashboards and content management systems using frameworks such as Express /
-					Django / ReactJS </li>
-				<li>Developed a search feature using ElasticSearch to reduce product-search time and increase search
-					reliability</li>
-				<li>Built a new realtime discussions feature for user communication and file sharing using Django channels</li>
-			</ul>
-		</p>
+
 		<p>
 			Outside of work, I can be found with my nose buried in a sci-fi novel, dancing bachata, or hunting for the best
-			brunch spot in town.
+			brunch spot in town. If you'd like to connect over a coffee, drop me a message at <a
+				href="mailto:jasminishh@gmail.com">jasminishh@gmail.com</a>
 		</p>
+
+		<div class="heading">Past Experiences</div>
+		<div class="tabbed-container" onload="useTab('sleek')">
+			<div class="tab-list">
+				<div class="tab active" onclick="useTab(this, 'sleek')">Sleek</div>
+				<div class="tab" onclick="useTab(this, 'fellow')">FellowAI</div>
+				<div class="tab" onclick="useTab(this, 'contentco')">content.co</div>
+				<div class="tab" onclick="useTab(this, 'nus')">NUS</div>
+			</div>
+			<div class="tab-content" id="sleek">
+				Software Engineer Intern @ <a href="https://sleek.sg/">Sleek</a><br>
+				🗓 Jan 2019 - May 2019
+				📍 Singapore
+				<ul>
+					<li>Worked on a NodeJS backend and React frontend for Sleek’s web-based internal management tools</li>
+					<li>Authored scripts for automated data processing and data extraction from internal OCR tools and external
+						APIs, as well as for data migration in MongoDB</li>
+				</ul>
+			</div>
+			<div class="tab-content" id="fellow" hidden=true>
+				Software Engineer Intern @ <a href="https://www.fellowai.com/">FellowAI</a><br>
+				🗓 Aug 2017 - Jul 2018<br>
+				📍 SF Bay Area
+				<ul>
+					<li>Worked on both Django backend and React frontend for various web-based consumer-facing dashboards</li>
+					<li>Developed search feature using ElasticSearch to reduce product-search time and increase search reliability
+					</li>
+					<li>Contributed to native Windows app on robots that communicated with ROS backend to deliver customer service
+						to retail customers</li>
+				</ul>
+			</div>
+			<div class="tab-content" id="contentco" hidden=true>
+				Software Engineer Intern @ <a href="https://content.co/">content.co</a><br>
+				🗓 May 2017 - Jul 2017<br>
+				📍 Singapore
+				<ul>
+					<li>Built a new realtime discussions feature for user communications and file sharing using Django channels
+					</li>
+					<li>Worked on realtime collaborative content editing</li>
+					<li>Migrated existing polling-based notifications system to a pub-sub notifications system</li>
+				</ul>
+			</div>
+			<div class="tab-content" id="nus" hidden=true>
+				Teaching Assistant @ National University of Singapore<br>
+				🗓 Jan 2017 - May 2017
+				<ul>
+					<li>Explained Data Structures and Algorithms concepts to a class of 20 students</li>
+					<li>Graded students’ programs and provided constructive feedback</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </body>
 

@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
 :root {
-  --accent: tomato;
+  --accent: crimson;
+  --transition: linear 0.2s;
+  --monospace: 'Menlo', 'Courier New', Courier, monospace;
 }
 
 body {
@@ -13,6 +13,12 @@ body {
 
 a {
   color: var(--accent);
+  font-family: var(--monospace);
+  font-size: 0.9em;
+}
+
+ul {
+  padding-left: 18px;
 }
 
 .btn {
@@ -20,15 +26,15 @@ a {
   box-sizing: border-box;
   color: var(--accent);
   display: inline-block;
+  font-family: var(--monospace);
   font-size: 0.8em;
   letter-spacing: 3px;
   margin: 8px 8px 8px 0;
   padding: 8px 18px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: linear 0.3s;
+  transition: var(--transition);
 }
-
 .btn:hover {
   background-color: var(--accent);
   color: white;
@@ -36,18 +42,18 @@ a {
 
 .container {
   box-sizing: border-box;
-  padding: 20px;
-  max-width: 750px;
   margin: 0 auto;
+  max-width: 750px;
+  padding: 20px;
 }
 
 .heading {
   font-size: 2em;
   font-weight: bold;
+  margin-top: 30px;
   text-align: center;
 }
 
-/* about me */
 .about-container {
   box-sizing: border-box;
   display: flex;
@@ -55,20 +61,54 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  max-width: 750px;
-  min-height: 50vh;
-  padding: 20px;
+  padding-top: 20px;
 }
 .about-me {
-  max-width: 450px;
+  max-width: 410px;
   padding: 8px;
+  text-align: center;
 }
 .profile-pic {
   border-radius: 50%;
-  height: 200px;
+  height: 210px;
   padding: 8px 18px;
 }
 .title {
   font-size: 3em;
   font-weight: bold;
+  padding-top: 15px;
+}
+
+.tabbed-container {
+  display: flex;
+  margin: 20px auto;
+}
+.tab {
+  font-family: var(--monospace);
+  font-size: 0.8em;
+  min-width: 120px;
+  padding: 8px 20px 8px 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+.tab:hover, .tab.active {
+  background-color: var(--accent);
+  color: white;
+}
+.tab-content {
+  border-left: 2px solid var(--accent);
+  min-height: 100%;
+  padding-left: 12px;
+}
+
+@media (max-width: 500px) {
+  .btn {
+    letter-spacing: 2px;
+    padding: 8px 10px;
+  }
+  .tab {
+    letter-spacing: 1px;
+    min-width: 65px;
+  }
 }
