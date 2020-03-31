@@ -1,6 +1,2 @@
-# MacOS 
+# MacOS
 .DS_Store
-
-# sass
-.sass-cache
-styles/styles.css.map
