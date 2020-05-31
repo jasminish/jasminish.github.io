@@ -61,7 +61,7 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 .about-me {
   max-width: 410px;
@@ -103,6 +103,9 @@ ul {
 }
 
 @media (max-width: 500px) {
+  .about-container{
+    padding-top: 20px;
+  }
   .btn {
     letter-spacing: 2px;
     padding: 8px 10px;
